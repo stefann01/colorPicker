@@ -1,0 +1,17 @@
+.test {
+    background-color: #4780ff;
+    border-radius: 5px;
+    color: black !important;
+    background-position: center;
+    transition: background 0.5s;
+}
+
+.test:hover {
+    background: #47a7f5 radial-gradient(circle, transparent 1%, #47a7f5 1%) center/15000%;
+}
+
+.test:active {
+    background-color: #00ff00;
+    background-size: 100%;
+    transition: background 0s;
+}
