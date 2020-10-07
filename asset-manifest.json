@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/%7BcolorPicker%7D/static/css/main.464d6f8d.chunk.css",
-    "main.js": "/%7BcolorPicker%7D/static/js/main.95e642a5.chunk.js",
-    "main.js.map": "/%7BcolorPicker%7D/static/js/main.95e642a5.chunk.js.map",
-    "runtime-main.js": "/%7BcolorPicker%7D/static/js/runtime-main.f0ac14f2.js",
-    "runtime-main.js.map": "/%7BcolorPicker%7D/static/js/runtime-main.f0ac14f2.js.map",
-    "static/css/2.d9ad5f5c.chunk.css": "/%7BcolorPicker%7D/static/css/2.d9ad5f5c.chunk.css",
-    "static/js/2.60f197b9.chunk.js": "/%7BcolorPicker%7D/static/js/2.60f197b9.chunk.js",
-    "static/js/2.60f197b9.chunk.js.map": "/%7BcolorPicker%7D/static/js/2.60f197b9.chunk.js.map",
-    "index.html": "/%7BcolorPicker%7D/index.html",
-    "precache-manifest.f8c3f1c8d80cdd98a358172c098125c4.js": "/%7BcolorPicker%7D/precache-manifest.f8c3f1c8d80cdd98a358172c098125c4.js",
-    "service-worker.js": "/%7BcolorPicker%7D/service-worker.js",
-    "static/css/2.d9ad5f5c.chunk.css.map": "/%7BcolorPicker%7D/static/css/2.d9ad5f5c.chunk.css.map",
-    "static/css/main.464d6f8d.chunk.css.map": "/%7BcolorPicker%7D/static/css/main.464d6f8d.chunk.css.map",
-    "static/js/2.60f197b9.chunk.js.LICENSE.txt": "/%7BcolorPicker%7D/static/js/2.60f197b9.chunk.js.LICENSE.txt"
+    "main.css": "/colorPicker/static/css/main.464d6f8d.chunk.css",
+    "main.js": "/colorPicker/static/js/main.8eb5ea02.chunk.js",
+    "main.js.map": "/colorPicker/static/js/main.8eb5ea02.chunk.js.map",
+    "runtime-main.js": "/colorPicker/static/js/runtime-main.a5d0f2d2.js",
+    "runtime-main.js.map": "/colorPicker/static/js/runtime-main.a5d0f2d2.js.map",
+    "static/css/2.d9ad5f5c.chunk.css": "/colorPicker/static/css/2.d9ad5f5c.chunk.css",
+    "static/js/2.60f197b9.chunk.js": "/colorPicker/static/js/2.60f197b9.chunk.js",
+    "static/js/2.60f197b9.chunk.js.map": "/colorPicker/static/js/2.60f197b9.chunk.js.map",
+    "index.html": "/colorPicker/index.html",
+    "precache-manifest.25d9f152c9a026a129171b849049b89c.js": "/colorPicker/precache-manifest.25d9f152c9a026a129171b849049b89c.js",
+    "service-worker.js": "/colorPicker/service-worker.js",
+    "static/css/2.d9ad5f5c.chunk.css.map": "/colorPicker/static/css/2.d9ad5f5c.chunk.css.map",
+    "static/css/main.464d6f8d.chunk.css.map": "/colorPicker/static/css/main.464d6f8d.chunk.css.map",
+    "static/js/2.60f197b9.chunk.js.LICENSE.txt": "/colorPicker/static/js/2.60f197b9.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.f0ac14f2.js",
+    "static/js/runtime-main.a5d0f2d2.js",
     "static/css/2.d9ad5f5c.chunk.css",
     "static/js/2.60f197b9.chunk.js",
     "static/css/main.464d6f8d.chunk.css",
-    "static/js/main.95e642a5.chunk.js"
+    "static/js/main.8eb5ea02.chunk.js"
   ]
 }
