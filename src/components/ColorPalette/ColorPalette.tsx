@@ -7,11 +7,16 @@ import copy from "copy-to-clipboard";
 import { useSnackbar } from "notistack";
 import Button from "react-bootstrap/Button";
 import Badge from "react-bootstrap/Badge";
+import styles from "./colorPalette.module.scss";
+import { MdContentCopy } from "react-icons/md";
+import { HiOutlineLockClosed, HiOutlineLockOpen } from "react-icons/hi";
+import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
+import ReactTooltip from "react-tooltip";
 class PaletteModel {
     constructor(public colors: Array<string>) {}
 }
 
-const initialColors = new PaletteModel(["#ff2345", "#dd5412", "#ccdf90", "#123456", "#0000aa"]);
+const initialColors = new PaletteModel(["#ff2345", "#dd5412", "#ccdf90", "#123456"]);
 function ColorPalette() {
     const [palette, setPallete] = useState<PaletteModel>(initialColors);
     const [height, setHeight] = useState<number>(0);
@@ -55,38 +60,25 @@ function ColorPalette() {
         });
     }
 
-    return (
-        <Container fluid>
-            <Row style={{ height: "400px", overflowY: "scroll", marginTop: "10px", marginBottom: "10px" }}>
-                <Col>
-                    <ListGroup id="picker">
-                        {palette.colors.map((color, index) => (
-                            <ListGroup.Item key={index} style={{ display: "flex", height: "60px" }}>
-                                <label>
-                                    <input type="color" value={color} onChange={(event) => changePalette(event, index)} />
-                                </label>
-                                <label style={{ float: "right", marginLeft: "auto", textAlign: "left" }}>{color}</label>
+    function validateHexColor(color: string) {
+        return /^#[0-9A-F]{6}$/i.test(color);
+    }
 
-                                <Button
-                                    onClick={() => {
-                                        copyCodeToClipboard(color);
-                                    }}
-                                    style={{ float: "right" }}
-                                    variant="primary"
-                                >
-                                    Clipboard
-                                </Button>
-                            </ListGroup.Item>
-                        ))}
-                    </ListGroup>
-                </Col>
-            </Row>
-            <Row style={{ height: "400px" }}>
-                {palette.colors.map((color, index) => (
-                    <Col key={index} style={{ backgroundColor: color, width: "100%", height: height }}></Col>
-                ))}
-            </Row>
-        </Container>
+    return (
+        <div className={styles.colorPalette}>
+            <ReactTooltip />
+            {palette.colors.map((color, index) => (
+                <div key={index} className={styles.parent} style={{ backgroundColor: color, width: "100%" }}>
+                    <input type="text" value={color} style={{ marginBottom: "30px" }} />
+                    <MdContentCopy className={styles.child} data-tip="Copy to Clipboard" onClick={() => copyCodeToClipboard(color)} />
+                    <HiOutlineLockOpen className={styles.child} data-tip="Lock color" />
+                    <div>
+                        <AiOutlineLeft data-tip="Move Left" className={styles.iconMove} />
+                        <AiOutlineRight data-tip="Move Right" className={styles.iconMove} />
+                    </div>
+                </div>
+            ))}
+        </div>
     );
 }
 

@@ -1,6 +1,7 @@
 @media only screen and (max-width: 350px) {
-    .App {
+    .app {
         min-width: 350px;
         overflow-x: scroll;
+        height: 100% !important;
     }
 }

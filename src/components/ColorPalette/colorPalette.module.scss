@@ -1,0 +1,39 @@
+.colorPalette {
+    height: calc(100% - 112px);
+    display: flex;
+    min-width: 320px;
+    overflow-x: auto;
+}
+
+.parent {
+    display: flex;
+    flex-direction: column-reverse;
+    place-items: center;
+    overflow: auto;
+    padding: 10px;
+}
+
+.child {
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 3px solid rgba(37, 37, 37, 0.774);
+    background-color: rgba(255, 255, 255, 0.63);
+    cursor: pointer;
+    font-size: 3rem;
+    text-align: center;
+    transition: background 1.3s;
+    margin: 25px;
+}
+
+.child:active {
+    background-color: #3f3535;
+    background-size: 100%;
+    transition: background 0s;
+}
+
+.iconMove {
+    font-size: 1.3rem;
+    margin-right: 12px;
+    margin-left: 12px;
+    margin-bottom: 25px;
+}

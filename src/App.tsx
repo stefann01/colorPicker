@@ -1,21 +1,23 @@
 import React from "react";
-import "./App.css";
+import styles from "./App.module.scss";
 import NavigationBar from "./components/NavigationBar/NavigationBar";
 import "bootstrap/dist/css/bootstrap.min.css";
 import ColorPalette from "./components/ColorPalette/ColorPalette";
 import { SnackbarProvider } from "notistack";
+import OptionBar from "./components/OptionBar/OptionBar";
 
 function App() {
     return (
-        <div className="App">
+        <div style={{ height: "100%" }}>
             <SnackbarProvider
                 maxSnack={3}
                 anchorOrigin={{
-                    vertical: "bottom",
+                    vertical: "top",
                     horizontal: "center",
                 }}
             >
                 <NavigationBar />
+                <OptionBar />
                 <ColorPalette />
             </SnackbarProvider>
         </div>
