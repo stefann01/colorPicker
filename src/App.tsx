@@ -1,10 +1,10 @@
 import React from "react";
-import styles from "./App.module.scss";
 import NavigationBar from "./components/NavigationBar/NavigationBar";
 import "bootstrap/dist/css/bootstrap.min.css";
 import ColorPalette from "./components/ColorPalette/ColorPalette";
 import { SnackbarProvider } from "notistack";
 import OptionBar from "./components/OptionBar/OptionBar";
+import { ColorContextProvider } from "./Context/ColorContext";
 
 function App() {
     return (
@@ -17,8 +17,10 @@ function App() {
                 }}
             >
                 <NavigationBar />
-                <OptionBar />
-                <ColorPalette />
+                <ColorContextProvider>
+                    <OptionBar />
+                    <ColorPalette />
+                </ColorContextProvider>
             </SnackbarProvider>
         </div>
     );
