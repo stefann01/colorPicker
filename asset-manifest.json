@@ -1,25 +1,25 @@
 {
   "files": {
     "main.css": "/colorPicker/static/css/main.cba62aab.chunk.css",
-    "main.js": "/colorPicker/static/js/main.1d717e4f.chunk.js",
-    "main.js.map": "/colorPicker/static/js/main.1d717e4f.chunk.js.map",
+    "main.js": "/colorPicker/static/js/main.c76306fa.chunk.js",
+    "main.js.map": "/colorPicker/static/js/main.c76306fa.chunk.js.map",
     "runtime-main.js": "/colorPicker/static/js/runtime-main.a5d0f2d2.js",
     "runtime-main.js.map": "/colorPicker/static/js/runtime-main.a5d0f2d2.js.map",
     "static/css/2.d9ad5f5c.chunk.css": "/colorPicker/static/css/2.d9ad5f5c.chunk.css",
-    "static/js/2.02a779ac.chunk.js": "/colorPicker/static/js/2.02a779ac.chunk.js",
-    "static/js/2.02a779ac.chunk.js.map": "/colorPicker/static/js/2.02a779ac.chunk.js.map",
+    "static/js/2.5669a89d.chunk.js": "/colorPicker/static/js/2.5669a89d.chunk.js",
+    "static/js/2.5669a89d.chunk.js.map": "/colorPicker/static/js/2.5669a89d.chunk.js.map",
     "index.html": "/colorPicker/index.html",
-    "precache-manifest.858dc81f88cbe4baa7a1f3885cc85a44.js": "/colorPicker/precache-manifest.858dc81f88cbe4baa7a1f3885cc85a44.js",
+    "precache-manifest.681d50fe1d25ee0a19118097ab9feb27.js": "/colorPicker/precache-manifest.681d50fe1d25ee0a19118097ab9feb27.js",
     "service-worker.js": "/colorPicker/service-worker.js",
     "static/css/2.d9ad5f5c.chunk.css.map": "/colorPicker/static/css/2.d9ad5f5c.chunk.css.map",
     "static/css/main.cba62aab.chunk.css.map": "/colorPicker/static/css/main.cba62aab.chunk.css.map",
-    "static/js/2.02a779ac.chunk.js.LICENSE.txt": "/colorPicker/static/js/2.02a779ac.chunk.js.LICENSE.txt"
+    "static/js/2.5669a89d.chunk.js.LICENSE.txt": "/colorPicker/static/js/2.5669a89d.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.a5d0f2d2.js",
     "static/css/2.d9ad5f5c.chunk.css",
-    "static/js/2.02a779ac.chunk.js",
+    "static/js/2.5669a89d.chunk.js",
     "static/css/main.cba62aab.chunk.css",
-    "static/js/main.1d717e4f.chunk.js"
+    "static/js/main.c76306fa.chunk.js"
   ]
 }
