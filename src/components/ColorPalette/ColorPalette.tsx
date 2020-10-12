@@ -23,8 +23,8 @@ function ColorPalette() {
 
     const handleKeyDown = (event: any) => {
         console.log("A key was pressed", event.keyCode);
-        if (event.keyCode === 32) {
-           colorContext.dispatchColorAction({type:"Generate"});
+        switch(event.keyCode){
+            case 32:colorContext.dispatchColorAction({type:"Generate"});
         }
     };
     useEffect(() => {
@@ -56,10 +56,10 @@ function ColorPalette() {
                     <MdContentCopy className={styles.child} data-tip="Copy to Clipboard" onClick={() => copyCodeToClipboard(color.hexCode)} />
                     <HiOutlineLockOpen className={styles.child} data-tip="Lock color" />
                     <div>
-                        <AiOutlineLeft data-tip="Move Left" className={styles.iconMove} />
-                        <AiOutlineRight data-tip="Move Right" className={styles.iconMove} />
+                        <AiOutlineLeft data-tip="Move Left" className={styles.iconMove} onClick={()=>{colorContext.dispatchColorAction({type:"Move Left", payload:{index:index}})}} />
+                        <AiOutlineRight data-tip="Move Right" className={styles.iconMove} onClick={()=>{colorContext.dispatchColorAction({type:"Move Right", payload:{index:index}})}} />
                     </div>
-                    <FiTrash2 className={styles.iconDelete} onClick={()=>{colorContext.dispatchColorAction({type:"Remove", payload: index})}} />
+                    <FiTrash2  className={styles.iconDelete} onClick={()=>{colorContext.dispatchColorAction({type:"Remove", payload: index})}} />
                 </div>
             ))}
         </div>

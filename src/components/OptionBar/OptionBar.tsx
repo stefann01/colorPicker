@@ -1,5 +1,5 @@
 import React from "react";
-import {FiPlusSquare} from "react-icons/fi";
+import {FiPlusSquare, FiMinusSquare} from "react-icons/fi";
 import styles from "./optionBar.module.scss";
 import { useColorContext } from "../../Context/ColorContext";
 
@@ -21,6 +21,7 @@ function OptionBar() {
                 <option>Gradient</option>
                 <option>Locked gradient</option>
             </select>
+            <FiMinusSquare data-tip="Remove last color" className={styles.removeColor} onClick={()=>{colorContext.dispatchColorAction({type:"Remove Last Color"})}}/>
             </div>
         </>
     );

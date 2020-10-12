@@ -11,4 +11,11 @@ export class ColorService{
     generateRandomColor():ColorModel{
         return new ColorModel("#" + ((Math.random() * 0xffffff) << 0).toString(16).padStart(6, "0"));
     }
+
+    swapColors(colors:Array<ColorModel>, first:number, second:number){
+        let temp = colors[first];
+        colors[first] = colors[second];
+        colors[second] = temp;
+        return colors;
+    }
 }
