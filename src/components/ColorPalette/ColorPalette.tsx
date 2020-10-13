@@ -23,8 +23,9 @@ function ColorPalette() {
 
     const handleKeyDown = (event: any) => {
         console.log("A key was pressed", event.keyCode);
-        switch(event.keyCode){
-            case 32:colorContext.dispatchColorAction({type:"Generate"});
+        switch (event.keyCode) {
+            case 32:
+                colorContext.dispatchColorAction({ type: "Generate" });
         }
     };
     useEffect(() => {
@@ -33,7 +34,6 @@ function ColorPalette() {
             window.removeEventListener("keydown", handleKeyDown);
         };
     }, [handleKeyDown]);
-
 
     function copyCodeToClipboard(color: string) {
         copy(color.toString());
@@ -52,14 +52,47 @@ function ColorPalette() {
             <ReactTooltip />
             {colorContext.colors.map((color, index) => (
                 <div key={index} className={styles.parent} style={{ backgroundColor: color.hexCode, width: "100%" }}>
-                    <input type="text" value={color.hexCode} style={{ marginLeft: "30%", marginRight:"30%" }} />
+                    <input type="text" value={color.hexCode} style={{ width: "inherit" }} />
                     <MdContentCopy className={styles.child} data-tip="Copy to Clipboard" onClick={() => copyCodeToClipboard(color.hexCode)} />
-                    <HiOutlineLockOpen className={styles.child} data-tip="Lock color" />
+                    {color.isLocked ? (
+                        <HiOutlineLockClosed
+                            onClick={() => {
+                                colorContext.dispatchColorAction({ type: "LockUnlock", payload: { index } });
+                            }}
+                            className={styles.child}
+                            data-tip="Unlock"
+                        />
+                    ) : (
+                        <HiOutlineLockOpen
+                            onClick={() => {
+                                colorContext.dispatchColorAction({ type: "LockUnlock", payload: { index } });
+                            }}
+                            className={styles.child}
+                            data-tip="Lock"
+                        />
+                    )}
                     <div>
-                        <AiOutlineLeft data-tip="Move Left" className={styles.iconMove} onClick={()=>{colorContext.dispatchColorAction({type:"Move Left", payload:{index:index}})}} />
-                        <AiOutlineRight data-tip="Move Right" className={styles.iconMove} onClick={()=>{colorContext.dispatchColorAction({type:"Move Right", payload:{index:index}})}} />
+                        <AiOutlineLeft
+                            data-tip="Move Left"
+                            className={styles.iconMove}
+                            onClick={() => {
+                                colorContext.dispatchColorAction({ type: "Move Left", payload: { index } });
+                            }}
+                        />
+                        <AiOutlineRight
+                            data-tip="Move Right"
+                            className={styles.iconMove}
+                            onClick={() => {
+                                colorContext.dispatchColorAction({ type: "Move Right", payload: { index } });
+                            }}
+                        />
                     </div>
-                    <FiTrash2  className={styles.iconDelete} onClick={()=>{colorContext.dispatchColorAction({type:"Remove", payload: index})}} />
+                    <FiTrash2
+                        className={styles.iconDelete}
+                        onClick={() => {
+                            colorContext.dispatchColorAction({ type: "Remove", payload: index });
+                        }}
+                    />
                 </div>
             ))}
         </div>

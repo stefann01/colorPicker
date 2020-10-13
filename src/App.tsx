@@ -16,7 +16,7 @@ function App() {
                     horizontal: "center",
                 }}
             >
-                <NavigationBar />
+                {/* <NavigationBar /> */}
                 <ColorContextProvider>
                     <OptionBar />
                     <ColorPalette />

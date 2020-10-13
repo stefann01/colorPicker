@@ -1,17 +1,16 @@
 .colorPalette {
-    height: calc(100% - 112px);
+    height: calc(100% - 56px);
     display: flex;
-    min-width: 320px;
-    overflow-x: auto;
+    min-width: 450px;
 }
 
 .parent {
+    min-width: 48px;
     display: flex;
     flex-direction: column-reverse;
     place-items: center;
     overflow: auto;
     padding: 10px;
-    overflow: hidden;
 }
 
 .child {
@@ -37,6 +36,7 @@
     margin-right: 12px;
     margin-left: 12px;
     margin-bottom: 25px;
+    min-width: 16px;
 }
 
 .iconDelete {
@@ -44,4 +44,5 @@
     margin-right: 12px;
     margin-left: 12px;
     margin-bottom: 25px;
+    min-width: 16px;
 }
